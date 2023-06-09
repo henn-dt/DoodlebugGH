@@ -17,3 +17,6 @@ if you download them from the Release page of this repo, you might need to unblo
 (right click -> properties -> unblock) 
 
 and restart Rhino/Grasshopper
+
+# General info
+main branch is used for development, release branch for releases.
