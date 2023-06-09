@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug64</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CB0BA4B8-F51E-4DB2-A581-FBF74F715D84}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IllestForGrasshopper</RootNamespace>
+    <AssemblyName>Illest</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug64|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="RhinoCommon">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Rhino 7\System\RhinoCommon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Grasshopper">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Rhino 7\Plug-ins\Grasshopper\Grasshopper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GH_IO">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Rhino 7\Plug-ins\Grasshopper\GH_IO.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConversionUtils.cs" />
+    <Compile Include="CreateText.cs" />
+    <Compile Include="CurvesToPaths.cs" />
+    <Compile Include="DocumentBounds.cs" />
+    <Compile Include="ExportDocument.cs" />
+    <Compile Include="CurveToPath.cs" />
+    <Compile Include="LayerItems.cs" />
+    <Compile Include="PathItemGeometry.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RunScript.cs" />
+    <Compile Include="ScaleTransforms.cs" />
+    <Compile Include="SendToBack.cs" />
+    <Compile Include="CloseDoc.cs" />
+    <Compile Include="Documents.cs" />
+    <Compile Include="LayerByName.cs" />
+    <Compile Include="Layers.cs" />
+    <Compile Include="NewDocument.cs" />
+    <Compile Include="OpenFile.cs" />
+    <Compile Include="OpenIllustrator.cs" />
+    <Compile Include="IllestForGrasshopperInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="BringToFront.cs" />
+    <Compile Include="SetLayer.cs" />
+    <Compile Include="SetLayerOrder.cs" />
+    <Compile Include="SetPathItemProperties.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\CloseDocument.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Documents.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\ExportDocument.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\LayerByName.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\LayerItems.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\Layers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\New Document.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\OpenFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\OpenIllustrator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\SendToBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\SetLayerOrder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\SetLayerProperties.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\BringToFront.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\SetPathItemProperties.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\PathGeometry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\CurveToPath.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IllustratorInterop\IllustratorInterface.csproj">
+      <Project>{837169e9-24e9-4843-a304-9e58f7f80490}</Project>
+      <Name>IllustratorInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\RunScript.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\docBounds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\ScaleTransform.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\TextToIllustrator.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>Copy "$(TargetPath)" %25appdata%25\Grasshopper\Libraries\Doodlebug\$(ProjectName).gha
+Copy "$(TargetDir)IllustratorInterop.dll"  %25appdata%25\Grasshopper\Libraries\Doodlebug\IllustratorInterop.dll
+Copy "$(TargetPath)" "$(TargetDir)$(ProjectName).gha"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <FallbackCulture>en-US</FallbackCulture>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug64|AnyCPU'">
+    <StartProgram>C:\Program Files\Rhinoceros 5 (64-bit)\System\Rhino.exe</StartProgram>
+    <StartArguments>
+    </StartArguments>
+    <StartAction>Program</StartAction>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+</Project>
